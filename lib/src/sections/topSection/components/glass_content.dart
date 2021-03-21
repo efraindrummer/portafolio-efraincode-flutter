@@ -25,7 +25,7 @@ class GlassContent extends StatelessWidget {
             maxHeight: size.height * 0.7
           ),
           width: double.infinity,
-          color: Colors.white.withOpacity(0.05),
+          color: Colors.black.withOpacity(0.3),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
