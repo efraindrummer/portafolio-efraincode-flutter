@@ -47,6 +47,18 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+
+  int selectedIndex = 0;
+  int hoverIndex = 0;
+  List<String> menuItems = [
+    "Home",
+    "About",
+    "Services",
+    "Portafolio",
+    "Testimonial",
+    "Contact"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -60,6 +72,43 @@ class _MenuState extends State<Menu> {
           topRight: Radius.circular(10)
         )
       ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: List.generate(
+          menuItems.length, 
+          (index) => buildMenuItems(index)
+        ),
+      ),
     );
   }
+
+  Widget buildMenuItems(int index) => InkWell(
+    onTap: (){
+      setState(() {
+        selectedIndex = index;
+      });
+    },
+    child: Container(
+      constraints: BoxConstraints(minWidth: 122),
+      height: 100,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Text(
+            menuItems[index].toUpperCase(),
+            style: TextStyle(
+              fontSize: 22,
+              color: kTextColor
+            ),  
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: selectedIndex == index ? -2 : -32,
+            child: Image.asset("assets/images/Hover.png"),
+          )
+        ],
+      ),
+    ),
+  );
 }
