@@ -2,7 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:portatofio_efraindrummer_flutterwebb/constantes.dart';
-import 'package:portatofio_efraindrummer_flutterwebb/src/sections/topSection/components/glass_content.dart';
+import 'package:portatofio_efraindrummer_flutterwebb/src/sections/topSection/components/efraincode_picture.dart';
+import 'package:portatofio_efraindrummer_flutterwebb/src/sections/topSection/components/logo_blur_titlte_box.dart';
 
 class TopSection extends StatelessWidget {
 
@@ -32,13 +33,7 @@ class TopSection extends StatelessWidget {
             LogoAndBlurBoxTitle(size: size),
             Positioned(
               right: 0,
-              child: Container(
-                constraints: BoxConstraints(
-                  maxWidth: 639,
-                  maxHeight: 860
-                ),
-                child: Image.asset("assets/images/efraincode.png"),
-              ),
+              child: EfrainCodePicture(),
             )
           ],
         ),
@@ -47,25 +42,3 @@ class TopSection extends StatelessWidget {
   }
 }
 
-class LogoAndBlurBoxTitle extends StatelessWidget {
-  const LogoAndBlurBoxTitle({
-    Key key,
-    @required this.size,
-  }) : super(key: key);
-
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        //Image.asset("assets/images/Logo.png"),
-        Text("EFRAIN MAY", style: TextStyle(fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),),
-        Spacer(),
-        GlassContent(size: size),
-        Spacer(flex: 3)
-      ],
-    );
-  }
-}
