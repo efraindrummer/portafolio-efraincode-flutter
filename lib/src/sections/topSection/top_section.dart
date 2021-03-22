@@ -15,16 +15,11 @@ class TopSection extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       constraints: BoxConstraints(
-        maxHeight: 900,
+        maxHeight: 700,
         minHeight: 700
       ),
       width: double.infinity,
-      /* decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage("assets/images/fondo-principal.png"),
-        ),
-      ), */
+      //Aui va la imagen de logo
       child: Container(
         margin: EdgeInsets.only(top: kDefaultPadding),
         width: 1200,
@@ -34,6 +29,10 @@ class TopSection extends StatelessWidget {
             Positioned(
               right: 0,
               child: EfrainCodePicture(),
+            ),
+            Positioned(
+              bottom: 0,
+              child: Menu(),
             )
           ],
         ),
@@ -42,3 +41,25 @@ class TopSection extends StatelessWidget {
   }
 }
 
+class Menu extends StatefulWidget {
+  @override
+  _MenuState createState() => _MenuState();
+}
+
+class _MenuState extends State<Menu> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
+      constraints: BoxConstraints(maxWidth: 1110),
+      height: 100,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10)
+        )
+      ),
+    );
+  }
+}
