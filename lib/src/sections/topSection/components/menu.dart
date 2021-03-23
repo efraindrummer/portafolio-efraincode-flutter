@@ -30,7 +30,10 @@ class _MenuState extends State<Menu> {
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10),
           topRight: Radius.circular(10)
-        )
+        ),
+        boxShadow: [
+          kDefaultShadow
+        ]
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
