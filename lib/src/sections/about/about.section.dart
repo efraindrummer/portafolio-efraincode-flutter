@@ -13,8 +13,38 @@ class About extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          AboutTextSign()
+          AboutTextSign(),
+          Expanded(
+            child: AboutTextSection(text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam, Lorem ipsum dolor sit amet, consectetur adipisicing elit.!",),
+          ),
+          Expanded(
+            child: AboutTextSection(text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam, Lorem ipsum dolor sit amet, consectetur adipisicing elit.!",),
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class AboutTextSection extends StatelessWidget {
+  const AboutTextSection({
+    Key key, this.text,
+  }) : super(key: key);
+
+  final String text;
+  
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontWeight: FontWeight.w200,
+          color: Colors.white,
+          height: 2
+        ),
       ),
     );
   }
