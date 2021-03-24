@@ -16,8 +16,8 @@ class HomeScreen extends StatelessWidget {
             //top section screens
             TopSection(),
             SizedBox(height: kDefaultPadding * 2),
-            ServiceSection(),
             About(),
+            ServiceSection(),
             //Sized box Separation
             SizedBox(height: 500),
           ],
