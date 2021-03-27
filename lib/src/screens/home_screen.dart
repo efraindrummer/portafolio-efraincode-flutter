@@ -3,6 +3,7 @@ import 'package:portatofio_efraindrummer_flutterwebb/constantes.dart';
 import 'package:portatofio_efraindrummer_flutterwebb/src/sections/about/about.section.dart';
 import 'package:portatofio_efraindrummer_flutterwebb/src/sections/service/service_section.dart';
 import 'package:portatofio_efraindrummer_flutterwebb/src/sections/topSection/top_section.dart';
+import 'package:portatofio_efraindrummer_flutterwebb/src/sections/work_recent/work_recent.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -18,6 +19,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: kDefaultPadding * 2),
             About(),
             ServiceSection(),
+            WorkRecent(),
             //Sized box Separation
             SizedBox(height: 500),
           ],
