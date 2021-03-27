@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portatofio_efraindrummer_flutterwebb/constantes.dart';
 import 'package:portatofio_efraindrummer_flutterwebb/src/components/CardHireMe.dart';
+import 'package:portatofio_efraindrummer_flutterwebb/src/components/SectionTitle.dart';
 
 class WorkRecent extends StatelessWidget {
 
@@ -22,6 +23,11 @@ class WorkRecent extends StatelessWidget {
           Transform.translate(
             offset: Offset(0, -80),
             child: CardHireMe()
+          ),
+          SectionTitle(
+            title: "Trabajos Recientes",
+            subTitle: "Mis Areas Fuertes",
+            color: Color(0xFFFFB100),
           )
         ],
       ),
