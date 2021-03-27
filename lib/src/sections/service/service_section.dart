@@ -17,7 +17,10 @@ class ServiceSection extends StatelessWidget {
             subTitle: "Servicios Ofrecidos", 
             color: Color(0xFFFF0000),
           ),
-          ServiceBoxCard(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: List.generate(services.length, (index) => ServiceBoxCard(index: index,))
+          ),
         ],
       ),
     );
@@ -26,8 +29,11 @@ class ServiceSection extends StatelessWidget {
 
 class ServiceBoxCard extends StatefulWidget {
   const ServiceBoxCard({
-    Key key,
+    Key key, 
+    this.index,
   }) : super(key: key);
+
+  final int index;
 
   @override
   _ServiceBoxCardState createState() => _ServiceBoxCardState();
@@ -54,7 +60,7 @@ class _ServiceBoxCardState extends State<ServiceBoxCard> {
         height: 256,
         width: 256,
         decoration: BoxDecoration(
-          color: services[0].color,
+          color: services[widget.index].color,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [if(isHover) kDefaultShadow]
         ),
@@ -78,12 +84,12 @@ class _ServiceBoxCardState extends State<ServiceBoxCard> {
                 ]
               ),
               child: Image.asset(
-                services[0].image,
+                services[widget.index].image,
                 fit: BoxFit.fill,
               ),
             ),
             SizedBox(height: kDefaultPadding),
-            Text(services[0].title, style: TextStyle(fontSize: 22),)
+            Text(services[widget.index].title, style: TextStyle(fontSize: 22),)
           ],
         ),
       ),
