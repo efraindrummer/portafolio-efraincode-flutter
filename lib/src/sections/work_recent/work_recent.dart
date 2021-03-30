@@ -37,7 +37,11 @@ class WorkRecent extends StatelessWidget {
             child: Wrap(
               spacing: kDefaultPadding,
               runSpacing: kDefaultPadding * 2,
-              children: List.generate(trabajosRecientes.length, (index) => RecentCardWidget(index: index)),
+              children: List.generate(trabajosRecientes.length, (index) => RecentCardWidget(
+                index: index, 
+                press: (){},
+                )
+              ),
             ),
           ),
           SizedBox(height: kDefaultPadding * 5)
