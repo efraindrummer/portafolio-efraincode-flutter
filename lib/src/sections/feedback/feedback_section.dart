@@ -19,6 +19,7 @@ class FeedBackSection extends StatelessWidget {
           ),
           SizedBox(height: kDefaultPadding),
           Container(
+            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
             height: 350,
             width: 350,
             decoration: BoxDecoration(
@@ -40,6 +41,23 @@ class FeedBackSection extends StatelessWidget {
                     image: DecorationImage(
                       image: AssetImage(opiniones[0].userPic)
                     )
+                  ),
+                ),
+                Text(
+                  opiniones[0].review, 
+                  style: TextStyle(
+                    color: kTextColor, 
+                    fontSize: 18, 
+                    fontWeight: FontWeight.w200,
+                    fontStyle: FontStyle.italic,
+                    height: 1.5
+                  )
+                ),
+                SizedBox(height: kDefaultPadding * 2),
+                Text(
+                  "Ronald Thompson", 
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
                   ),
                 )
               ],
