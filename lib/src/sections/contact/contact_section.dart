@@ -25,6 +25,20 @@ class ContactSection extends StatelessWidget {
             title: "Contactame",
             subTitle: "Consulta e Informate sobre Proyectos",
             color: Color(0xFF00d2ff),
+          ),
+          Container(
+            constraints: BoxConstraints(
+              maxWidth: 1110
+            ),
+            padding: EdgeInsets.all(kDefaultPadding * 3),
+            margin: EdgeInsets.only(top: kDefaultPadding * 2),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20), 
+                topRight: Radius.circular(20) 
+              )
+            ),
           )
         ],
       ),
