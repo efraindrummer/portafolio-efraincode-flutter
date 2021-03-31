@@ -55,38 +55,71 @@ class ContactBox extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          SocialCardWidget()
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SocialCardWidget(iconSrc: "assets/images/skype.png", color: Color(0xFF5433FF), name: "@efraincode", press: (){},),
+              SocialCardWidget(iconSrc: "assets/images/whatsapp.png", color: Color(0xFFA5FECB), name: "+54 9381169411", press: (){},),
+              SocialCardWidget(iconSrc: "assets/images/messanger.png", color: Color(0xFF20BDFF), name: "Efrain May", press: (){},),
+            ],
+          )
         ],
       ),
     );
   }
 }
 
-class SocialCardWidget extends StatelessWidget {
+class SocialCardWidget extends StatefulWidget {
+  
   const SocialCardWidget({
-    Key key,
+    Key key, 
+    this.iconSrc, 
+    this.name, 
+    this.color,
+    this.press,
   }) : super(key: key);
+
+  final String iconSrc, name;
+  final Color color;
+  final Function press;
+
+  @override
+  _SocialCardWidgetState createState() => _SocialCardWidgetState();
+}
+
+class _SocialCardWidgetState extends State<SocialCardWidget> {
+
+  bool isHover = false;
 
   @override
   Widget build(BuildContext context) {
     return FittedBox(
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2, horizontal: kDefaultPadding * 1.5),
-        decoration: BoxDecoration(
-          color: Color(0xFF5433FF),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [kDefaultShadow]
-        ),
-        child: Row(
-          children: <Widget>[
-            Image.asset(
-              "assets/images/skype.png",
-              height: 80,
-              width: 80,
-            ),
-            SizedBox(width: kDefaultPadding),
-            Text("@efraincode")
-          ],
+      child: InkWell(
+        onTap: widget.press,
+        onHover: (value){
+          setState(() {
+            isHover = value;
+          });
+        },
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 200),
+          padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2, horizontal: kDefaultPadding * 1.5),
+          decoration: BoxDecoration(
+            color: widget.color,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [if(isHover)kDefaultShadow]
+          ),
+          child: Row(
+            children: <Widget>[
+              Image.asset(
+                widget.iconSrc,
+                height: 80,
+                width: 80,
+              ),
+              SizedBox(width: kDefaultPadding),
+              Text(widget.name, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),)
+            ],
+          ),
         ),
       ),
     );
