@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portatofio_efraindrummer_flutterwebb/constantes.dart';
+import 'package:portatofio_efraindrummer_flutterwebb/src/components/SectionTitle.dart';
 
 class ContactSection extends StatelessWidget {
 
@@ -8,11 +10,23 @@ class ContactSection extends StatelessWidget {
       height: 500,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFFE8F0F9),
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage("assets/images/bg_img_2.png")
+        gradient: LinearGradient(
+          colors: <Color>[
+            Color(0xFF5433FF),
+            Color(0xFF20BDFF),
+            Color(0xFFA5FECB)
+          ]
         )
+      ),
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: kDefaultPadding * 2.5),
+          SectionTitle(
+            title: "Contactame",
+            subTitle: "Consulta e Informate sobre Proyectos",
+            color: Color(0xFF00d2ff),
+          )
+        ],
       ),
     );
   }
