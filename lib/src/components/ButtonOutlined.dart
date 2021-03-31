@@ -17,7 +17,10 @@ class ButtonOutlined extends StatelessWidget {
   Widget build(BuildContext context) {
     return FittedBox(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: kDefaultPadding, horizontal: kDefaultPadding * 2.5),
+        padding: const EdgeInsets.symmetric(
+          vertical: kDefaultPadding, 
+          horizontal: kDefaultPadding * 2.5
+        ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(50),
           child: OutlinedButton(
@@ -26,7 +29,13 @@ class ButtonOutlined extends StatelessWidget {
               children: <Widget>[
                 Image.asset(imageSrc, height: 50,),
                 SizedBox(width: kDefaultPadding),
-                Text(text, style: TextStyle(fontSize: 18, color: Colors.white),)
+                Text(
+                  text, 
+                  style: TextStyle(
+                    fontSize: 18, 
+                    color: Colors.white
+                  ),
+                )
               ],
             ),
           ),

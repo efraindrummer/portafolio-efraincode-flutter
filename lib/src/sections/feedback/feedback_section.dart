@@ -21,7 +21,9 @@ class FeedBackSection extends StatelessWidget {
           SizedBox(height: kDefaultPadding),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: List.generate(opiniones.length, (index) => FeedbackCard(index: index,)),
+            children: List.generate(
+              opiniones.length, (index) => FeedbackCard(index: index,)
+            ),
           )
         ],
       ),

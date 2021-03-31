@@ -36,12 +36,18 @@ class CardHireMe extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "comenzando un nuevo proyecto".toUpperCase(), 
-                  style: TextStyle(fontSize: 38, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+                  style: TextStyle(
+                    fontSize: 38, 
+                    fontWeight: FontWeight.bold, 
+                    fontStyle: FontStyle.italic
+                  ),
                 ),
                 SizedBox(height: kDefaultPadding / 2),
                 Text(
                   "obtenga un presupuesto estimado para el nuevo proyecto".toUpperCase(),
-                  style: TextStyle(fontWeight: FontWeight.w200),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w200
+                  ),
                 )
               ],
             ),

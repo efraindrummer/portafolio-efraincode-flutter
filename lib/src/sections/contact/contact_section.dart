@@ -59,9 +59,9 @@ class ContactBox extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SocialCardWidget(iconSrc: "assets/images/skype.png", color: Color(0xFF5433FF), name: "@efraincode", press: (){},),
-              SocialCardWidget(iconSrc: "assets/images/whatsapp.png", color: Color(0xFFA5FECB), name: "+54 9381169411", press: (){},),
-              SocialCardWidget(iconSrc: "assets/images/messanger.png", color: Color(0xFF20BDFF), name: "Efrain May", press: (){},),
+              SocialCardWidget(iconSrc: "assets/images/skype.png",     color: Color(0xFF5433FF), name: "@efraincode",    press: (){},),
+              SocialCardWidget(iconSrc: "assets/images/whatsapp.png",  color: Color(0xFFA5FECB), name: "+54 9381169411", press: (){},),
+              SocialCardWidget(iconSrc: "assets/images/messanger.png", color: Color(0xFF20BDFF), name: "Efrain May",     press: (){},),
             ],
           )
         ],

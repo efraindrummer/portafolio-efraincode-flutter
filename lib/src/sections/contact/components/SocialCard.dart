@@ -35,11 +35,16 @@ class _SocialCardWidgetState extends State<SocialCardWidget> {
         },
         child: AnimatedContainer(
           duration: Duration(milliseconds: 200),
-          padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2, horizontal: kDefaultPadding * 1.5),
+          padding: EdgeInsets.symmetric(
+            vertical: kDefaultPadding / 2, 
+            horizontal: kDefaultPadding * 1.5
+          ),
           decoration: BoxDecoration(
             color: widget.color,
             borderRadius: BorderRadius.circular(10),
-            boxShadow: [if(isHover) kDefaultShadow]
+            boxShadow: [
+              if(isHover) kDefaultShadow
+            ]
           ),
           child: Row(
             children: <Widget>[
@@ -49,7 +54,14 @@ class _SocialCardWidgetState extends State<SocialCardWidget> {
                 width: 80,
               ),
               SizedBox(width: kDefaultPadding),
-              Text(widget.name, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),)
+              Text(
+                widget.name, 
+                style: TextStyle(
+                  color: Colors.white, 
+                  fontWeight: FontWeight.bold, 
+                  fontSize: 18
+                ),
+              ),
             ],
           ),
         ),

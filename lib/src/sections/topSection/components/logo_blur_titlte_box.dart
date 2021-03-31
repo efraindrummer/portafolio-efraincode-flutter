@@ -15,7 +15,14 @@ class LogoAndBlurBoxTitle extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         //Image.asset("assets/images/Logo.png"),
-        Text("EFRAIN MAY", style: TextStyle(fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),),
+        Text(
+          "EFRAIN MAY", 
+          style: TextStyle(
+            fontSize: 32, 
+            color: Colors.white, 
+            fontWeight: FontWeight.bold
+          ),
+        ),
         Spacer(),
         GlassContent(size: size),
         Spacer(flex: 3)

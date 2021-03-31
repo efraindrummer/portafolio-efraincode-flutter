@@ -16,7 +16,10 @@ class DownloadButtonCV extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding, horizontal: kDefaultPadding * 2.5),
+      padding: const EdgeInsets.symmetric(
+        vertical: kDefaultPadding, 
+        horizontal: kDefaultPadding * 2.5
+      ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(50),
         child: TextButton(
@@ -25,7 +28,13 @@ class DownloadButtonCV extends StatelessWidget {
             children: <Widget>[
               Image.asset(imageSrc, height: 50,),
               SizedBox(height: kDefaultPadding,),
-              Text(text, style: TextStyle(fontSize: 18, color: Colors.white))
+              Text(
+                text, 
+                style: TextStyle(
+                  fontSize: 18, 
+                  color: Colors.white
+                )
+              )
             ],
           ),
         ),
