@@ -135,6 +135,20 @@ class ContactForm extends StatelessWidget {
             ),
           ),
           SizedBox(height: kDefaultPadding * 2),
+          Center(
+            child: FittedBox(
+              child: GestureDetector(
+                onTap: (){},
+                child: Row(
+                  children: <Widget>[
+                    Image.asset("assets/images/contact_icon.png"),
+                    SizedBox(width: 20),
+                    Text("Contact Me!")
+                  ],
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
