@@ -63,7 +63,26 @@ class ContactBox extends StatelessWidget {
               SocialCardWidget(iconSrc: "assets/images/whatsapp.png",  color: Color(0xFFA5FECB), name: "+54 9381169411", press: (){},),
               SocialCardWidget(iconSrc: "assets/images/messanger.png", color: Color(0xFF20BDFF), name: "Efrain May",     press: (){},),
             ],
-          )
+          ),
+          SizedBox(height: kDefaultPadding * 2),
+          ContactForm()
+        ],
+      ),
+    );
+  }
+}
+
+class ContactForm extends StatelessWidget {
+  const ContactForm({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      child: Column(
+        children: <Widget>[
+          TextFormField()
         ],
       ),
     );
