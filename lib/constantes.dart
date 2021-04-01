@@ -14,13 +14,14 @@ final kDefaultShadow = BoxShadow(
 );
 
 //Diseño del Textfield
-const kDefaultOutlineInputBorder = OutlineInputBorder(
+final kDefaultOutlineInputBorder = OutlineInputBorder(
+  //borderRadius: BorderRadius.circular(50),
   borderSide: BorderSide(
     color: Color(0xFFCEE4DF)
   )
 );
 
-const kDefaultInputDecorationTheme = InputDecorationTheme(
+final kDefaultInputDecorationTheme = InputDecorationTheme(
   border: kDefaultOutlineInputBorder,
   enabledBorder: kDefaultOutlineInputBorder,
   focusedBorder: kDefaultOutlineInputBorder

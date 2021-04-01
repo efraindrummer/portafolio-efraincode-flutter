@@ -80,9 +80,61 @@ class ContactForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Column(
+      child: Wrap(
+        spacing: kDefaultPadding * 2.5,
+        runSpacing: kDefaultPadding * 1.5,
         children: <Widget>[
-          TextFormField()
+          SizedBox(
+            width: 470,
+            child: TextFormField(
+              onChanged: (value){},
+              decoration: InputDecoration(
+                labelText: "Your Name",
+                hintText: "Enter Your Name"
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 470,
+            child: TextFormField(
+              onChanged: (value){},
+              decoration: InputDecoration(
+                labelText: "Email Address",
+                hintText: "Enter Your Email Address"
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 470,
+            child: TextFormField(
+              onChanged: (value){},
+              decoration: InputDecoration(
+                labelText: "Project Type",
+                hintText: "Select Project Type"
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 470,
+            child: TextFormField(
+              onChanged: (value){},
+              decoration: InputDecoration(
+                labelText: "Project Budget",
+                hintText: "Select Project Budget"
+              ),
+            ),
+          ),
+          SizedBox(
+            //height: 300,
+            child: TextFormField(
+              onChanged: (value){},
+              decoration: InputDecoration(
+                labelText: "Description",
+                hintText: "Write some description"
+              ),
+            ),
+          ),
+          SizedBox(height: kDefaultPadding * 2),
         ],
       ),
     );

@@ -42,7 +42,8 @@ class GlassContent extends StatelessWidget {
                   height: 1.5
                 ),
               ),
-              Text("Sotfware Engineer en Tecnologias Web & Mobile",
+              Text(
+                "Sotfware Engineer en Tecnologias Web & Mobile",
                 style: Theme.of(context).textTheme.headline5.copyWith(
                   color: Colors.white
                 ),
